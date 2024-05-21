@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Red Dubai</title>
+    <link rel="stylesheet" href="style.css" />   
+<link
+rel="shortcut icon"
+href="./img/logocasinosuppo.png"
+type="image/x-icon"
+/>
+
+  </head>
+  <body>
+    <div class="logo">
+        <img src="./img/logocasinosuppo.png" alt="logo" >
+    </div>
+    <div class="main-title">
+      <p>Red Dubai <br>
+        Hablanos al whatsapp</p>
+      <p>crea tu cuenta</p>
+    </div>
+  
+    <div class="button-container">
+        <button class="button" id="whatsappButton">
+            Carga Aca
+            <img src="./img/image.png" alt="Whatsapp">
+        </button>
+    </div>
+
+<script>
+    document.getElementById("whatsappButton").addEventListener("click", function() {
+        var telefono = "5493513802061"; 
+        var mensaje = "Hola! Vi este anuncio, quisiera un nuevo usuario."; 
+        var link = "https://wa.me/" + telefono + "?text=" + encodeURIComponent(mensaje);
+        window.open(link, '_blank'); 
+    });
+</script>
+ 
+    <div class="info">
+        <p>Mínimo de carga: $1000 </p>
+        <h3>
+            RULETA EN VIVO - SLOTS <br>
+            APUESTAS DEPORTIVAS <br>
+            Y MUCHO MÁS <br>
+           
+        </h3>
+        <p>¡Muchas Suerte!</p>
+    </div>
+  </body>
+</html>

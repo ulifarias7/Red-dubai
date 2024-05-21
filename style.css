@@ -1,0 +1,127 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+body {
+    font-family: "Rubik", sans-serif;
+    background-color: #000000f1; /* Dark background */
+    background-image: url('#');
+    background-size: contain;
+    background-position: center;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0 1rem 0; /* Adjusted margins */
+}
+
+.logo img {
+    width: 14rem;
+}
+
+.main-title {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-title p {
+    margin: 0.5rem 0; /* Adjusted margin */
+    font-size: 35px;
+    letter-spacing: -1px;
+}
+
+.main-title p:first-child {
+    color: #ab07b9; /* Light gray for the first title */
+    margin-bottom: 2rem; /* Increase space below this element */
+}
+
+.main-title p:last-child {
+    color: #faf9fa; /* Orange for the second title */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0; /* Reduced margin */
+}
+
+.button {
+    width: 200px;
+    height: 50px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: center;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    gap: 8px; /* Space between text and icon */
+}
+
+.button img {
+    width: 20px; /* Adjust size of the icon */
+    height: 20px;
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    left: -4px;
+    top: -1px;
+    margin: auto;
+    width: 128px;
+    height: 48px;
+    border-radius: 10px;
+    background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+    z-index: -10;
+    pointer-events: none;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.button::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
+    transform: translate3d(0, 0, 0) scale(0.95);
+    filter: blur(20px);
+}
+
+.button:hover::after {
+    filter: blur(30px);
+}
+
+.button:hover::before {
+    transform: rotate(-180deg);
+}
+
+.button:active::before {
+    scale: 0.7;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ab07b9; /* Orange text */
+    margin: 1rem 0 2rem 0; /* Adjusted margin */
+}
+
+.info p {
+    font-size: 18px;
+    color: #f8f2f2;
+}
